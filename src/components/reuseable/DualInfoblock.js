@@ -1,7 +1,7 @@
 import React from "react"
 import Heading from "./Heading"
 import { Link } from "gatsby"
-import { Card, Button } from "react-bootstrap"
+
 
 export default function DualInfoblock({ heading }) {
   return (

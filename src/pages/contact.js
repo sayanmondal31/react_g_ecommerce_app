@@ -1,34 +1,31 @@
 import React from "react"
-import { Link } from "gatsby"
-import { graphql, useStaticQuery } from 'gatsby'
-
+import { graphql} from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from '../components/reuseable/HeroSection'
 import InfoBlock from '../components/reuseable/InfoBlock'
-import DualInfoblock from "../components/reuseable/DualInfoblock"
-import TeamPhotoSection from "../components/About/TeamPhotoSection"
+import Contact from '../components/contact/Contact'
 
 
-const AboutPage = ({data}) => (
+
+const ContactPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
     <HeroSection 
       img={data.img.childImageSharp.fluid}
-      title="I Write Code"  
+      title="Contact Us"  
       subtitle="LearnCOdeOnline.in"
       heroclass="about-background"
     />
-    {/* <DualInfoblock heading="Our team" /> */}
-    <DualInfoblock heading="A message from CEO"/>
-    <InfoBlock heading="About our vision" />
-    <TeamPhotoSection />
+    
+    <InfoBlock heading="How can we Help" />
+    <Contact />
   </Layout>
 )
 
 export const query = graphql`
 {
-  img:file(relativePath: { eq: "about.png" }) {
+  img:file(relativePath: { eq: "contact.png" }) {
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_withWebp 
@@ -38,4 +35,4 @@ export const query = graphql`
 }
 `
 
-export default AboutPage
+export default ContactPage

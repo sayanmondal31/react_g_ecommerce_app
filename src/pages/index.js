@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql} from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -47,7 +46,7 @@ export const query = graphql`
           description
         }
         image {
-          fixed(height: 200, width: 120) {
+          fixed(height: 200, width: 320) {
             ...GatsbyContentfulFixed_withWebp
           }
         }
